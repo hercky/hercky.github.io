@@ -34,6 +34,41 @@
 <!--    <link rel="icon" type="image/png" href="images/flags.png">-->
 
 
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+    
+    <script type="text/javascript">
+      let activeBlock = null
+      let $hiddenParaBlock = null
+      function toggleblock(selector, descParaSelector) {
+        let $descPara = descParaSelector ? document.getElementById(descParaSelector) : null
+        if (activeBlock) {
+          document.getElementById(activeBlock).style.display = 'none'
+        }
+        document.getElementById(selector).style.display = selector === activeBlock ? 'none' : 'block'
+        if (activeBlock === selector) {
+          activeBlock = null
+          if ($descPara) {
+            $descPara.style.display = 'block'
+          }
+        } else {
+          activeBlock = selector
+          if ($hiddenParaBlock && $hiddenParaBlock !== $descPara) {
+            $hiddenParaBlock.style.display = 'block'
+          }
+          if ($descPara) {
+            $descPara.style.display = 'none'
+            $hiddenParaBlock = $descPara
+          }
+        }
+      }
+
+
+    </script>
+
 </head>
 
 
@@ -54,19 +89,20 @@
               </p>
 
               <p>I am a PhD student supervised by <a href="https://www.cs.mcgill.ca/~jpineau/">Prof. Joelle Pineau</a> at <a href="https://cs.mcgill.ca/">McGill University</a>  and <a href="https://mila.quebec/">Mila</a>.
-                  I am primarily interested in Reinforcement Learning and Artificial Intelligence with a focus on Safety and Efficiency.
+                  I am primarily interested in Reinforcement Learning and Artificial Intelligence Safety with a focus on building efficient algorithms that prevent harm. 
               </p>
 
-              <p>
-                  <b>Research Summary:</b>
-
-                  With an increasing number of automated decision-making algorithms being deployed around us, it becomes important to be cautious of the various safety risks and biases associated with these algorithms, as machine learning algorithms in general, have shown to have the ability to inflict unintended behavior or harm if not developed or deployed with care.
-                  My research looks at the questions stemming
-                  As the hope is to improve the decision-making quality in the real-life, we need to be mindful that the algorithms we develop will be deployed in a societal setting.
+              <p> <b>Research Summary:</b> 
+                  
+                  With an increasing number of automated decision-making algorithms being deployed around us, it becomes important to address the safety risks and biases associated with these algorithms, as machine learning algorithms in general, have shown to have the ability to inflict unintended behavior or harm if not developed or deployed with care in a societal setting.
+                  <!-- My research takes steps towards this goal by studying the Reinforcement Learning settings where the primary focus is on the problem of learning intelligent behaviour for accomplishing a task, but with additional requirements on the nature of the algorithm’s behaviour that can be related to safety, reliability or fairness. -->
+                  My research takes steps towards this goal by building efficent Reinforcement Learning algorithms in the settings where the primary focus is on the problem of learning intelligent behaviour for accomplishing a task, but with additional requirements on the nature of the algorithm’s behaviour that can be related to safety, reliability or fairness.
+                  
               </p>
 
 
-                <p> <b> <u> I am on the job market for both industry and academic positions.</u></b> Please reach out if I'd be a good fit for your research group.</p>
+                <p> <b> <u> I am on the job market for industry positions.</u></b> Please reach out if I'd be a good fit for your
+                  research group.</p>
 
 <!--                <p>Before starting my graduate education at McGill, I worked for a short while as an Engineer at the <a href="https://www.ri.cmu.edu/">Robotics Institute, Carnegie Mellon University</a> (CMU). Prior to that, I completed my MS in Robotics from CMU where, along with a team of computer vision, medical and design experts, I worked on developing a prototype for a <a href="https://smartrehab.vtc.vt.edu">home-based stroke rehabilitation system</a>. Before pursuing graduate studies, I completed my undergraduate degree in Computer Science and Engineering from the <a href="https://alumni.iitj.ac.in/">Indian Institute of Technology, Jodhpur</a> in India.--></p>
 
@@ -75,12 +111,13 @@
                 <a href="https://scholar.google.ca/citations?user=DR1cT0MAAAAJ&hl=en">Google Scholar</a> &nbsp|&nbsp
                 <a href="https://ca.linkedin.com/"> LinkedIn </a>
                 &nbsp|&nbsp
-<!--                <a href="https://twitter.com/mklissar"> Twitter </a> &nbsp|&nbsp-->
                 <a href="data/cv.pdf"> CV </a>
               </p>
             </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/me.jpg"><img style="width:100%;max-width:100%;border-radius:15px" alt="profile photo" src="images/me.jpg" class="hoverZoomLink"></a>
+            <!-- <td style="padding:2.5%;width:40%;max-width:40%"> -->
+            <td style="padding:2.5%;width:30%;max-width:30%">
+              <a href="images/me2.jpg"><img style="width:100%;max-width:100%;border-radius:15px" alt="profile photo"
+                  src="images/me1.jpg" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -103,41 +140,15 @@
                 <div class="panel-body" id="oScroll" >
                 <div id="scroll">
 
-                <p></p>
-                <li><b>08/10/2022</b> Selected as a Top Reviewer at NeurIPS 2022! We all have a part to play in making our research community better, as much as time allows us.</li>
-                <p></p>
-
-                <p></p>
-                <li><b>14/09/2022</b> Our <a href="https://openreview.net/forum?id=QTjJMy-UNO">work</a> on combining meta learning with emphatic methods was accepted at NeurIPS 2022!</li>
+                <li><b>09/2022</b> Our work on Group Fairness in RL is selected for an Oral at EWRL!</li>
                 <p></p>
 
-                <p></p>
-                <li><b>11/07/2022</b> Started a research internship at DeepMind Alberta with Marlos C. Machado!</li>
-                <p></p>
-
-
-<!--                 <li><b>11/07/2022</b> Our <a href="https://openreview.net/forum?id=ZGi3bDRXkx">paper</a> on emphatic methods in RL has !</li> -->
-<!--                 <p></p> -->
-
-                <li><b>16/04/2022</b> Selected as an Highlighted Reviewer for ICLR 2022! Hopefully those reviews helped the authors.</li>
+                <li><b>06/2022</b> We are organizing an ICML workshop on <a
+                    href="https://responsibledecisionmaking.github.io/">responsible decision-making in dynamic environments</a> with
+                  focus on long-term welfare, safety and fairness.</li>
                 <p></p>
 
-                <li><b>15/10/2021</b> Selected as an Oustanding Reviewer (top 8%) for NeurIPS 2021! Amazing to be recognized for the time and thought put into the reviewing service.</li>
-                <p></p>
-
-
-                <li><b>28/09/2021</b> <i>"Flexible Option Learning"</i> has been accepted as a Spotlight to NeurIPS 2021! The paper and code will be out soon.</li>
-                <p></p>
-
-
-
-                <p></p>
-                <li><b>23/09/2021</b> Started a research internship at Amazon Web Services under the supervision of Alex Smola and Rasool Fakoor.</li>
-                <p></p>
-
-
-                <p></p>
-                <li><b>01/04/2021</b> Started a research internship at Microsoft Research Montreal under the supervision of Mehdi Fatemi and Romain Laroche.</li>
+                <li><b>09/2021</b> <i>"Multi-Objective SPIBB"</i> has been accepted to NeurIPS 2021! </li>
                 <p></p>
 
 
@@ -152,6 +163,7 @@
 
 
 
+        <!-- Projects -->
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -165,119 +177,94 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;" cellspacing="0" cellpadding="10">
 
 
-
+          <!-- Group-Fairness -->
           <tr>
-            <td width="33%" valign="center" align="center"><a href="https://openreview.net/pdf?id=QTjJMy-UNO"><img src="images/mint.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            <td width="33%" valign="center" align="center"><a href="projects/group-fairness.gif"><img
+                  src="projects/group-fairness.gif" alt="sym" width="80%" height="120" style="border-radius:15px"></a>
             </td>
             <td width="67%" valign="top">
-              <p><a href="https://openreview.net/pdf?id=QTjJMy-UNO" id="mint">
-              <heading>Adaptive Interest for Emphatic Reinforcement Learning</heading></a><br>
-              <b>Martin Klissarov</b>, Rasool Fakoor, Jonas Mueller, Kavosh Asadi, Taesup Kim and Alex Smola<br>
-              Neural Information Processing Systems (NeurIPS), 2022<br> <a href="https://darl-workshop.github.io/" id="mint">DARL</a> workshop at ICML 2022, <font style="color:#ff5733">Spotlight</font>
+              <p><a href="" id="group-fairness">
+                  <heading>Group Fairness in Reinforcement Learning </heading>
+                </a><br>
+                <b>Harsh Satija</b>, Matteo Pirotta, Alessandro Lazaric, Joelle Pineau<br>
+                <!-- TMLR (2023) <br>  -->
+                European Workshop on Reinforcement Learning (EWRL), 2022, <font style="color:#ff5733">Oral</font>
               </p>
 
 
+            <div class="paper" id="group-fairness">
+              <a href="https://ewrl.files.wordpress.com/2022/09/fair_rl_ewrl_camera_ready.pdf">pdf</a> |
+              <a href="javascript:toggleblock('group-fairness-abstract', 'group-fairness-desc')">abstract</a> |
+              <a shape="rect" href="javascript:toggleblock('group-fairness-bibtex', 'group-fairness-desc')" class="togglebib">bibtex</a> |
+              <!-- <a href="https://github.com/hercky/cmdps_via_bvf">code</a> -->
+              code (coming soon) 
+              <p align="justify"> <i id="group-fairness-abstract" class="hidden">
+                We pose and study the problem of satisfying fairness in the online Reinforcement Learning (RL) setting. We focus on the group notions of fairness, according to which agents belonging to different groups should have similar performance based on some given measure. We consider the setting of maximizing return in an unknown environment (unknown transition and reward function) and show that it is possible to have RL algorithms that learn the best fair policies without violating the fairness requirements at any point in time during the learning process. In the tabular finite-horizon episodic setting, we provide an algorithm that combines the principle of optimism and pessimism under uncertainty to achieve zero fairness violation with arbitrarily high probability while also maintaining sub-linear regret guarantees. For the high-dimensional Deep-RL setting, we present algorithms based on the performance-difference style approximate policy improvement update step and we report encouraging empirical results on various traditional RL-inspired benchmarks showing that our algorithms display the desired behavior of learning the optimal policy while performing a fair learning process.
+                </i></p>
+              <pre xml:space="preserve" id="group-fairness-bibtex" class="hidden"><object data="projects/bibs/group-fairness.bib" width="100%"></object></pre>
 
-            <div class="paper" id="flexibleoption">
-            <!-- <a href="https://sites.google.com/view/optionsofinterest">webpage</a> | -->
-            <a href="https://openreview.net/pdf?id=QTjJMy-UNO">pdf</a>
-            | <a href="./data/mint.bib">bibtex</a>
-            | code (coming soon)
-
+              <p id="bvf"></p>
             </div>
             </td>
           </tr>
 
-
-
+          <!-- MO-SPIBB -->
           <tr>
-            <td width="33%" valign="center" align="center"><a href="https://openreview.net/pdf?id=L5vbEVIePyb"><img src="images/flexibleoption.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            <td width="33%" valign="center" align="center"><a href="projects/mo-spibb.png"><img src="projects/mo-spibb.png"
+                  alt="sym" width="90%" style="border-radius:1px"></a>
             </td>
             <td width="67%" valign="top">
-              <p><a href="https://openreview.net/pdf?id=L5vbEVIePyb" id="flexibleoption">
-              <heading>Flexible Option Learning</heading></a><br>
-              <b>Martin Klissarov</b> and Doina Precup<br>
-              Neural Information Processing Systems (NeurIPS), 2021, <font style="color:#ff5733">Spotlight</font>
+              <p><a href="https://arxiv.org/abs/2106.00099" id="mo-spibb">
+                  <heading>Multi-Objective SPIBB</heading>
+                </a><br>
+                <b>Harsh Satija</b>, Philip S. Thomas, Joelle Pineau, Romain Laroche <br>
+                Neural Information Processing Systems (NeurIPS), 2021
               </p>
 
 
 
-            <div class="paper" id="flexibleoption">
-            <!-- <a href="https://sites.google.com/view/optionsofinterest">webpage</a> | -->
-            <a href="https://openreview.net/pdf?id=L5vbEVIePyb">pdf</a>
-            | <a href="./data/flexible.bib">bibtex</a>
-            | <a href="https://github.com/mklissa/MOC">code</a>
+            <div class="paper" id="mo-spibb">
+              <a href="https://arxiv.org/pdf/2106.00099.pdf">pdf</a> |
+              <a href="javascript:toggleblock('mo-spibb-abstract', 'mo-spibb-desc')">abstract</a> |
+              <a shape="rect" href="javascript:toggleblock('mo-spibb-bibtex', 'mo-spibb-desc')" class="togglebib">bibtex</a> |
+              <a href="https://github.com/hercky/mo-spibb-codebase">code</a>
+              <p align="justify"> <i id="mo-spibb-abstract" class="hidden">
+                We study the problem of Safe Policy Improvement (SPI) under constraints in the offline Reinforcement Learning (RL) setting. We consider the scenario where: (i) we have a dataset collected under a known baseline policy, (ii) multiple reward signals are received from the environment inducing as many objectives to optimize. We present an SPI formulation for this RL setting that takes into account the preferences of the algorithm's user for handling the trade-offs for different reward signals while ensuring that the new policy performs at least as well as the baseline policy along each individual objective. We build on traditional SPI algorithms and propose a novel method based on Safe Policy Iteration with Baseline Bootstrapping (SPIBB, Laroche et al., 2019) that provides high probability guarantees on the performance of the agent in the true environment. We show the effectiveness of our method on a synthetic grid-world safety task as well as in a real-world critical care context to learn a policy for the administration of IV fluids and vasopressors to treat sepsis.
+                </i></p>
+              <pre xml:space="preserve" id="mo-spibb-bibtex" class="hidden"><object data="projects/bibs/mo-spibb.bib" width="100%"></object></pre>
 
+              <p id="mo-spibb"></p>
             </div>
             </td>
           </tr>
 
-
+          <!-- Poly-RL -->
           <tr>
-            <td width="33%" valign="center" align="center"><a href="https://arxiv.org/abs/2010.02474"><img src="images/samplegraph.png" alt="sym" width="80%" height="150" style="border-radius:1px"></a>
+            <td width="33%" valign="center" align="center"><a href="projects/poly-rl.png"><img src="projects/poly-rl.png" alt="sym"
+                  width="80%" style="border-radius:1px"></a>
             </td>
             <td width="67%" valign="top">
-              <p><a href="https://proceedings.neurips.cc/paper/2020/file/970627414218ccff3497cb7a784288f5-Paper.pdf" id="phi_gcn">
-              <heading>Reward Propagation using Graph Convolutional Networks</heading></a><br>
-              <b>Martin Klissarov</b> and Doina Precup<br>
-              Neural Information Processing Systems (NeurIPS), 2020, <font style="color:#ff5733">Spotlight</font>
+              <p><a href="https://arxiv.org/abs/2012.13658" id="poly-rl">
+                  <heading>Locally Persistent Exploration in Continuous Control Tasks with Sparse Rewards
+                  </heading>
+                </a><br>
+                Susan Amin, Maziar Gomrokchi, Hossein Aboutalebi, <b>Harsh Satija</b>, Doina Precup <br>
+                International Conference on Machine Learning (ICML), 2021
               </p>
 
 
 
-            <div class="paper" id="phi_gcn">
-            <!-- <a href="https://sites.google.com/view/optionsofinterest">webpage</a> | -->
-            <a href="https://arxiv.org/abs/2010.02474">pdf</a>
-            | <a href="./data/phi_gcn.bib">bibtex</a>
-            | <a href="https://github.com/mklissa/phi_gcn">code</a>
+            <div class="paper" id="poly-rl">
+              <a href="https://arxiv.org/pdf/2012.13658.pdf">pdf</a> | 
+              <a href="javascript:toggleblock('poly-rl-abstract', 'poly-rl-desc')">abstract</a> |
+              <a shape="rect" href="javascript:toggleblock('poly-rl-bibtex', 'poly-rl-desc')" class="togglebib">bibtex</a> |
+              <a href="https://github.com/h-aboutalebi/SparseBaseline">code</a>
+              <p align="justify"> <i id="poly-rl-abstract" class="hidden">
+                A major challenge in reinforcement learning is the design of exploration strategies, especially for environments with sparse reward structures and continuous state and action spaces. Intuitively, if the reinforcement signal is very scarce, the agent should rely on some form of short-term memory in order to cover its environment efficiently. We propose a new exploration method, based on two intuitions: (1) the choice of the next exploratory action should depend not only on the (Markovian) state of the environment, but also on the agent's trajectory so far, and (2) the agent should utilize a measure of spread in the state space to avoid getting stuck in a small region. Our method leverages concepts often used in statistical physics to provide explanations for the behavior of simplified (polymer) chains in order to generate persistent (locally self-avoiding) trajectories in state space. We discuss the theoretical properties of locally self-avoiding walks and their ability to provide a kind of short-term memory through a decaying temporal correlation within the trajectory. We provide empirical evaluations of our approach in a simulated 2D navigation task, as well as higher-dimensional MuJoCo continuous control locomotion tasks with sparse rewards.
+                </i></p>
+              <pre xml:space="preserve" id="poly-rl-bibtex" class="hidden"><object data="projects/bibs/poly-rl.bib" width="100%"></object></pre>
 
-            </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td width="33%" valign="center" align="center"><a href="https://128.84.21.199/pdf/2001.00271.pdf"><img src="images/opint.png" alt="sym" width="80%" height="150" style="border-radius:15px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://128.84.21.199/pdf/2001.00271.pdf" id="interest options">
-              <heading>Options of Interest: Temporal Abstraction with Interest Functions</heading></a><br>
-              Khimya Khetarpal, <b>Martin Klissarov</b>, Maxime Chevalier-Boisvert, Pierre-Luc Bacon, Doina Precup<br>
-              Association for the Advancement of Artificial Intelligence (AAAI), 2020
-              </p>
-
-
-
-            <div class="paper" id="optionsofinterest">
-            <a href="https://sites.google.com/view/optionsofinterest">webpage</a> |
-            <a href="https://128.84.21.199/pdf/2001.00271.pdf">pdf</a> |
-            <a href="./data/opint.bib">bibtex</a> |
-            <a href="https://github.com/kkhetarpal/ioc">code</a>
-
-            </div>
-            </td>
-          </tr>
-
-
-
-          <tr>
-            <td width="33%" valign="center" align="center"><a href="https://tarl2019.github.io/assets/papers/klissarov2019variational.pdf"><img src="images/vse.png" alt="sym" width="80%"  style="border-radius:15px"></a>
-            </td>
-            <td width="67%" valign="top">
-              <p><a href="https://tarl2019.github.io/assets/papers/klissarov2019variational.pdf" id="interest options">
-              <heading>Variational State Encoding<br/> </heading></a><br>
-              <b>Martin Klissarov*</b>, Riashat Islam*, Khimya Khetarpal, Doina Precup<br>
-              The Multi-disciplinary Conference on Reinforcement Learning and Decision Making (RLDM), 2019
-              </p>
-
-
-            <div class="paper" id="neurips19">
-
-
-
-            <a href="https://tarl2019.github.io/assets/papers/klissarov2019variational.pdf">pdf</a> |
-                          <a href="./data/vse.bib">bibtex</a>
-
-
+              <p id="poly-rl"></p>
             </div>
             </td>
           </tr>
@@ -285,20 +272,113 @@
 
 
 
+          <!-- BVFs -->
           <tr>
-            <td width="33%" valign="center" align="center"><a href="https://openreview.net/forum?id=BkgkoToZZ7"><img src="images/graph.png" alt="sym" width="80%" style="border-radius:15px"></a>
+            <td width="33%" valign="center" align="center"><a href="./projects/bvf.png"><img src="projects/bvf.png" alt="sym"
+                  width="80%" style="border-radius:15px"></a>
             </td>
             <td width="67%" valign="top">
-              <p><a href="https://openreview.net/forum?id=BkgkoToZZ7" id="interest options">
-              <heading>Diffusion-Based Approximate Value Functions<br/> </heading></a><br>
-              <b>Martin Klissarov</b>, Doina Precup<br>
-              International Conference on Machine Learning (ICML) Efficient Credit Assignemnt Workshop, 2018, <font style="color:#ff5733">Oral</font>
+              <p><a href="https://arxiv.org/abs/2008.11811" id="bvfs">
+                  <heading>Constrained Markov Decision Processes via Backward Value Functions
+                  </heading>
+                </a><br>
+                <b>Harsh Satija</b>, Philip Amortila, Joelle Pineau<br>
+                International Conference on Machine Learning (ICML), 2020
               </p>
 
 
-            <div class="paper" id="neurips19">
-            <a href="https://openreview.net/forum?id=BkgkoToZZ7">pdf</a>  |
-            <a href="./data/davf.bib">bibtex</a>
+
+            <div class="paper" id="bvfs">
+              <a href="https://arxiv.org/pdf/2008.11811.pdf">pdf</a> |
+              <a href="javascript:toggleblock('bvf-abstract', 'bvf-desc')">abstract</a> |
+              <a shape="rect" href="javascript:toggleblock('bvf-bibtex', 'bvf-desc')" class="togglebib">bibtex</a> |
+              <a href="https://github.com/hercky/cmdps_via_bvf">code</a>
+              <p align="justify"> <i id="bvf-abstract" class="hidden">
+                Although Reinforcement Learning (RL) algorithms have found tremendous success in simulated domains, 
+                they often cannot directly be applied to physical systems, especially in cases where there are hard 
+                constraints to satisfy (e.g. on safety or resources). In standard RL, the agent is incentivized to 
+                explore any behavior as long as it maximizes rewards, but in the real world, undesired behavior can 
+                damage either the system or the agent in a way that breaks the learning process itself. In this work, 
+                we model the problem of learning with constraints as a Constrained Markov Decision Process and provide 
+                a new on-policy formulation for solving it. A key contribution of our approach is to translate cumulative 
+                cost constraints into state-based constraints. Through this, we define a safe policy improvement method 
+                which maximizes returns while ensuring that the constraints are satisfied at every step. We provide 
+                theoretical guarantees under which the agent converges while ensuring safety over the course of 
+                training. We also highlight the computational advantages of this approach. The effectiveness of our 
+                approach is demonstrated on safe navigation tasks and in safety-constrained versions of MuJoCo 
+                environments, with deep neural networks.
+                </i></p>
+              <pre xml:space="preserve" id="bvf-bibtex" class="hidden"><object data="projects/bibs/bvf.bib" width="100%"></object></pre>
+
+              <p id="bvf"></p>
+
+            </div>
+            </td>
+          </tr>
+
+          <!-- Exp-survey -->
+          <tr>
+            <td width="33%" valign="center" align="center"><a href="projects/exp-survey.png"><img src="projects/exp-survey.png"
+                  alt="sym" width="80%" style="border-radius:15px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p><a href="https://arxiv.org/abs/2109.00157" id="exp-survey">
+                  <heading>A Survey of Exploration Methods in Reinforcement Learning<br /> </heading>
+                </a><br>
+                Susan Amin, <b>Harsh Satija*</b>, Maziar Gomrokchi*, Herke Van Hoof*, Doina Precup<br>
+                <i>In review</i> 
+              </p>
+
+
+            <div class="paper" id="exp-survey">
+              <a href="https://arxiv.org/pdf/2109.00157.pdf">pdf</a> |
+              <a href="javascript:toggleblock('exp-survey-abstract', 'exp-survey-desc')">abstract</a> |
+              <a shape="rect" href="javascript:toggleblock('exp-survey-bibtex', 'exp-survey-desc')" class="togglebib">bibtex</a> 
+              <p align="justify"> <i id="exp-survey-abstract" class="hidden">
+                Exploration is an essential component of reinforcement learning algorithms, where agents need to learn how to predict and control unknown and often stochastic environments. Reinforcement learning agents depend crucially on exploration to obtain informative data for the learning process as the lack of enough information could hinder effective learning. In this article, we provide a survey of modern exploration methods in (Sequential) reinforcement learning, as well as a taxonomy of exploration methods.
+                </i></p>
+              <pre xml:space="preserve" id="exp-survey-bibtex" class="hidden"><object data="projects/bibs/exp-survey.bib" width="100%"></object></pre>
+
+              <p id="exp-survey"></p>
+            </div>
+            </td>
+          </tr>
+
+          <!-- RVF-via-NF -->
+          <tr>
+            <td width="33%" valign="center" align="center"><a href="projects/rvf-via-nf.png"><img src="projects/rvf-via-nf.png"
+                  alt="sym" width="80%" height="" style="border-radius:15px"></a>
+            </td>
+            <td width="67%" valign="top">
+              <p><a href="https://arxiv.org/abs/1806.02315" id="RVF-via-NF">
+                  <heading> Randomized value functions via multiplicative normalizing flows </heading>
+                </a><br>
+                Ahmed Touati, <b>Harsh Satija</b>, Joshua Romoff, Joelle Pineau, Pascal Vincent<br>
+                Uncertainty in Artificial Intelligence (UAI), 2020
+              </p>
+
+
+            <div class="paper" id="RVF-via-NF">
+              <a href="http://proceedings.mlr.press/v115/touati20a/touati20a.pdf">pdf</a> |
+              <a href="javascript:toggleblock('rvf-nf-abstract', 'rvf-nf-desc')">abstract</a> |
+              <a shape="rect" href="javascript:toggleblock('rvf-nf-bibtex', 'rvf-nf-desc')" class="togglebib">bibtex</a> |
+              <a href="https://github.com/facebookresearch/RandomizedValueFunctions">code</a>
+              <p align="justify"> <i id="rvf-nf-abstract" class="hidden">
+                Randomized value functions offer a promising approach towards the challenge of efficient exploration in complex environments with high
+                dimensional state and action spaces. Unlike traditional point estimate methods, randomized
+                value functions maintain a posterior distribution over action-space values. This prevents the agent’s behavior policy from prematurely
+                exploiting early estimates and falling into local optima. In this work, we leverage recent
+                advances in variational Bayesian neural networks and combine these with traditional Deep Q-Networks (DQN) and Deep Deterministic
+                Policy Gradient (DDPG) to achieve randomized value functions for high-dimensional domains. In particular, we augment DQN
+                and DDPG with multiplicative normalizing flows in order to track a rich approximate posterior
+                distribution over the parameters of the value function. This allows the agent to perform approximate Thompson sampling in a computationally efficient manner via
+                stochastic gradient methods. We demonstrate the benefits of our approach through an empirical comparison in
+                high dimensional environments.
+                </i></p>
+              <pre xml:space="preserve" id="rvf-nf-bibtex" class="hidden"><object data="projects/bibs/rvf-via-nf.bib" width="100%"></object></pre>
+
+              <p id="rvf-nf-desc"></p>
+              
 
             </div>
             </td>
@@ -307,39 +387,54 @@
 
 
 
-
+          <!-- DDR -->
           <tr>
-            <td width="33%" valign="center" align="center"><a href="https://arxiv.org/pdf/1709.04571.pdf"><img src="images/amidar_db2.png" alt="sym" width="80%" height="150" style="border-radius:15px"></a>
+            <td width="33%" valign="center" align="center"><a href=""><img src="projects/ddr.png" alt="sym" width="80%" height=""
+                  style="border-radius:15px"></a>
             </td>
             <td width="67%" valign="top">
-              <p><a href="https://arxiv.org/pdf/1709.04571.pdf" id="interest options">
-              <heading>When Waiting is not an Option:  Learning Options using the Deliberation Cost<br/> </heading></a><br>
-              Jean Harb, Pierre-Luc Bacon, <b>Martin Klissarov</b>,  Doina Precup<br>
-              Association for the Advancement of Artificial Intelligence (AAAI), 2018
+              <p><a href="" id="ddr">
+                  <heading>Decoupling dynamics and reward for transfer learning </heading>
+                </a><br>
+                <b>Harsh Satija*,</b> Amy Zhang*, Joelle Pineau <br>
+                International Conference on Learning Representations (ICLR) Workshop Track, 2018
               </p>
 
 
-            <div class="paper" id="a2oc">
+            <div class="paper" id="ddr">
+              <a href="https://arxiv.org/pdf/1804.10689.pdf">pdf</a> |
+              <a href="javascript:toggleblock('ddr-abstract', 'ddr-desc')">abstract</a> |
+              <a shape="rect" href="javascript:toggleblock('ddr-bibtex', 'ddr-desc')" class="togglebib">bibtex</a> |
+              <a href="">code</a>
+              <p align="justify"> <i id="ddr-abstract" class="hidden">
+                  Current reinforcement learning (RL) methods can successfully learn single tasks, but often generalize poorly to
+                  modest perturbations in task domain or training procedure. In this work we present a
+                  decoupled learning strategy for RL that creates a shared representation space where knowledge
+                  can be robustly transferred. We separate learning the task representation, the forward dynamics, the
+                  inverse dynamics and the reward function of the domain, and show that this decoupling improves
+                  performance within task, transfers well to changes in dynamics and reward, and can be effectively
+                  used for online planning. Empirical results show good performance in both continuous and discrete
+                  RL domains.
+                </i></p>
+              <pre xml:space="preserve" id="ddr-bibtex" class="hidden"><object data="projects/bibs/ddr.bib" width="100%"></object></pre>
 
-            <a href="https://arxiv.org/pdf/1709.04571.pdf">pdf</a> |
-            <a href="./data/option_db.bib">bibtex</a> |
-            <a href="https://github.com/jeanharb/a2oc_delib">code</a>
-
-            </div>
+              <p id="ddr-desc"></p>
+                
+              </div>
             </td>
           </tr>
 
 
 
-
-          <tr>
+          <!-- SMT -->
+          <!-- <tr>
             <td width="33%" valign="center" align="center"><a href="https://arxiv.org/pdf/1712.00004.pdf"><img src="images/ppoc.gif" alt="sym" width="80%" style="border-radius:15px"></a>
             </td>
             <td width="67%" valign="top">
               <p><a href="https://arxiv.org/pdf/1712.00004.pdf" id="interest options">
-              <heading>Learning Options End-to-End for Continuous Action Tasks<br/> </heading></a><br>
-              <b>Martin Klissarov</b>, Pierre-Luc Bacon, Jean Harb,  Doina Precup<br>
-              Neural Information Processing Systems (NIPS) Hierarchichal Reinforcement Learning Workshop, 2017
+              <heading>Simultaneous machine translation using deep reinforcement learning<br /> </heading></a><br>
+              <b>Harsh Satija</b>, Joelle Pineau
+              International Conference on Machine Learning (ICML) Workshop on Abstraction in Reinforcement Learning, 2016
               </p>
 
 
@@ -350,128 +445,14 @@
 
             </div>
             </td>
-          </tr>
-
-
-        </table>
-
-
-
-
-
-
-
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Education</heading>
-            </td>
-          </tr>
-        </tbody></table>
-
-        <table width="100%" align="justify" border="0" cellspacing="15" cellpadding="10">
-
-
-          <tr>
-            <td width="15%" valign="center" align="center"><img src="images/mcgill.png" alt="mcgill" width="60" height="82"></td>
-            <td width="85%" valign="center">
-              <p>
-                <span><strong>McGill University</strong></span><span style="float:right">2020 - Present</span>
-                <br>
-                PhD in Computer Science
-                <br>
-                Supervisor: <a href="https://www.cs.mcgill.ca/~dprecup/"> Prof. Doina Precup</a>
-                <br>
-              </p>
-            </td>
-          </tr>
-
-
-          <tr>
-            <td width="15%" valign="center" align="center"><img src="images/mcgill.png" alt="mcgill" width="60" height="82"></td>
-            <td width="85%" valign="center">
-              <p>
-                <span><strong>McGill University</strong></span><span style="float:right">2018 - 2020</span>
-                <br>
-                MSc in Computer Science
-                <br>
-                Supervisor: <a href="https://www.cs.mcgill.ca/~dprecup/"> Prof. Doina Precup</a>
-                <br>
-              </p>
-            </td>
-          </tr>
-
-<!--           <tr>
-            <td width="15%" valign="center" align="center"><img src="images/poly_logo.jpeg" alt="poly" width="80" height="80"></td>
-            <td width="85%" valign="center">
-              <p>
-                <span><strong>Polytechnique Montréal</strong></span><span style="float:right">2014 - 2018</span>
-                <br>
-                BEng in Electrical Engineering
-                <br>
-                Supervisor: <a href="https://www.calozc.org/"> Prof. Christophe Caloz</a>
-              </p>
-            </td>
           </tr> -->
+
+
         </table>
 
 
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      <heading>Reviewing</heading>
-    </td>
-  </tr>
-</tbody></table>
 
-<table width="100%" align="center" border="0" cellpadding="0">
-  <tr><td>
-    <ul>
-    <li> TMLR: 2022 </li>
-    <li> NeurIPS: 2020 / 2021 (Outstanding reviewer) / 2022 (Top reviewer) </li>
-    <li> ICML: 2021 / 2022</li>
-    <li> AAAI: 2021 / 2022</li>
-    <li> ICLR: 2022 (Highlighted reviewer) </li>
-    <li> CoLLAs: 2022 </li>
-    </ul>
-  </td></tr>
-
-
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      <heading>Organisation Comittee</heading>
-    </td>
-  </tr>
-</tbody></table>
-
-<table width="100%" align="center" border="0" cellpadding="0">
-  <tr><td>
-    <ul>
-    <li> CoLLAs: 2022 </li>
-    </ul>
-  </td></tr>
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      <heading>Selected Awards</heading>
-    </td>
-  </tr>
-</tbody></table>
-
-<table width="100%" align="center" border="0" cellpadding="0">
-  <tr><td>
-    <ul>
-     <li> Natural Sciences and Engineering Research Council of Canada (NSERC)  Alexander Graham Bell Canada Graduate Scholarship (2020-2023)</li>
-    <li> Fonds de Recherche du Québec - Nature et Technologie (FRQNT)  Masters Research Scholarship (2018-2020)</li>
-    <li> McGill Graduate Excellence Award (2018-2020)</li>
-    <li> Ordre des Ingénieurs Foundation Excellence Scholarship (2016)</li>
-    </ul>
-  </td></tr>
-</table>
 
 
 

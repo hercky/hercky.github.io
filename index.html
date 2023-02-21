@@ -192,13 +192,14 @@
             <div class="paper" id="group-fairness">
               <a href="https://ewrl.files.wordpress.com/2022/09/fair_rl_ewrl_camera_ready.pdf">pdf</a> |
               <a href="javascript:toggleblock('group-fairness-abstract', 'group-fairness-desc')">abstract</a> |
-              <a shape="rect" href="javascript:toggleblock('group-fairness-bibtex', 'group-fairness-desc')" class="togglebib">bibtex</a> |
+              <!-- <a shape="rect" href="javascript:toggleblock('group-fairness-bibtex', 'group-fairness-desc')" class="togglebib">bibtex</a> | -->
+              <a href="./projects/bibs/group-fairness.bib">bibtex</a> |
               <!-- <a href="https://github.com/hercky/cmdps_via_bvf">code</a> -->
               code (coming soon) 
               <p align="justify"> <i id="group-fairness-abstract" class="hidden">
                 We pose and study the problem of satisfying fairness in the online Reinforcement Learning (RL) setting. We focus on the group notions of fairness, according to which agents belonging to different groups should have similar performance based on some given measure. We consider the setting of maximizing return in an unknown environment (unknown transition and reward function) and show that it is possible to have RL algorithms that learn the best fair policies without violating the fairness requirements at any point in time during the learning process. In the tabular finite-horizon episodic setting, we provide an algorithm that combines the principle of optimism and pessimism under uncertainty to achieve zero fairness violation with arbitrarily high probability while also maintaining sub-linear regret guarantees. For the high-dimensional Deep-RL setting, we present algorithms based on the performance-difference style approximate policy improvement update step and we report encouraging empirical results on various traditional RL-inspired benchmarks showing that our algorithms display the desired behavior of learning the optimal policy while performing a fair learning process.
                 </i></p>
-              <pre xml:space="preserve" id="group-fairness-bibtex" class="hidden"><object data="projects/bibs/group-fairness.bib" width="100%"></object></pre>
+              <pre xml:space="preserve" id="group-fairness-bibtex" class="hidden"><object data="./projects/bibs/group-fairness.bib" width="100%"></object></pre>
 
               <p id="bvf"></p>
             </div>
@@ -223,7 +224,8 @@
             <div class="paper" id="mo-spibb">
               <a href="https://arxiv.org/pdf/2106.00099.pdf">pdf</a> |
               <a href="javascript:toggleblock('mo-spibb-abstract', 'mo-spibb-desc')">abstract</a> |
-              <a shape="rect" href="javascript:toggleblock('mo-spibb-bibtex', 'mo-spibb-desc')" class="togglebib">bibtex</a> |
+              <!-- <a shape="rect" href="javascript:toggleblock('mo-spibb-bibtex', 'mo-spibb-desc')" class="togglebib">bibtex</a> | -->
+              <a href="./projects/bibs/mo-spibb.bib">bibtex</a> |
               <a href="https://github.com/hercky/mo-spibb-codebase">code</a>
               <p align="justify"> <i id="mo-spibb-abstract" class="hidden">
                 We study the problem of Safe Policy Improvement (SPI) under constraints in the offline Reinforcement Learning (RL) setting. We consider the scenario where: (i) we have a dataset collected under a known baseline policy, (ii) multiple reward signals are received from the environment inducing as many objectives to optimize. We present an SPI formulation for this RL setting that takes into account the preferences of the algorithm's user for handling the trade-offs for different reward signals while ensuring that the new policy performs at least as well as the baseline policy along each individual objective. We build on traditional SPI algorithms and propose a novel method based on Safe Policy Iteration with Baseline Bootstrapping (SPIBB, Laroche et al., 2019) that provides high probability guarantees on the performance of the agent in the true environment. We show the effectiveness of our method on a synthetic grid-world safety task as well as in a real-world critical care context to learn a policy for the administration of IV fluids and vasopressors to treat sepsis.
@@ -254,7 +256,8 @@
             <div class="paper" id="poly-rl">
               <a href="https://arxiv.org/pdf/2012.13658.pdf">pdf</a> | 
               <a href="javascript:toggleblock('poly-rl-abstract', 'poly-rl-desc')">abstract</a> |
-              <a shape="rect" href="javascript:toggleblock('poly-rl-bibtex', 'poly-rl-desc')" class="togglebib">bibtex</a> |
+              <!-- <a shape="rect" href="javascript:toggleblock('poly-rl-bibtex', 'poly-rl-desc')" class="togglebib">bibtex</a> | -->
+              <a href="./projects/bibs/poly-rl.bib">bibtex</a> |
               <a href="https://github.com/h-aboutalebi/SparseBaseline">code</a>
               <p align="justify"> <i id="poly-rl-abstract" class="hidden">
                 A major challenge in reinforcement learning is the design of exploration strategies, especially for environments with sparse reward structures and continuous state and action spaces. Intuitively, if the reinforcement signal is very scarce, the agent should rely on some form of short-term memory in order to cover its environment efficiently. We propose a new exploration method, based on two intuitions: (1) the choice of the next exploratory action should depend not only on the (Markovian) state of the environment, but also on the agent's trajectory so far, and (2) the agent should utilize a measure of spread in the state space to avoid getting stuck in a small region. Our method leverages concepts often used in statistical physics to provide explanations for the behavior of simplified (polymer) chains in order to generate persistent (locally self-avoiding) trajectories in state space. We discuss the theoretical properties of locally self-avoiding walks and their ability to provide a kind of short-term memory through a decaying temporal correlation within the trajectory. We provide empirical evaluations of our approach in a simulated 2D navigation task, as well as higher-dimensional MuJoCo continuous control locomotion tasks with sparse rewards.
@@ -288,7 +291,8 @@
             <div class="paper" id="bvfs">
               <a href="https://arxiv.org/pdf/2008.11811.pdf">pdf</a> |
               <a href="javascript:toggleblock('bvf-abstract', 'bvf-desc')">abstract</a> |
-              <a shape="rect" href="javascript:toggleblock('bvf-bibtex', 'bvf-desc')" class="togglebib">bibtex</a> |
+              <!-- <a shape="rect" href="javascript:toggleblock('bvf-bibtex', 'bvf-desc')" class="togglebib">bibtex</a> | -->
+              <a href="./projects/bibs/bvf.bib">bibtex</a> |
               <a href="https://github.com/hercky/cmdps_via_bvf">code</a>
               <p align="justify"> <i id="bvf-abstract" class="hidden">
                 Although Reinforcement Learning (RL) algorithms have found tremendous success in simulated domains, 
@@ -330,7 +334,8 @@
             <div class="paper" id="exp-survey">
               <a href="https://arxiv.org/pdf/2109.00157.pdf">pdf</a> |
               <a href="javascript:toggleblock('exp-survey-abstract', 'exp-survey-desc')">abstract</a> |
-              <a shape="rect" href="javascript:toggleblock('exp-survey-bibtex', 'exp-survey-desc')" class="togglebib">bibtex</a> 
+              <a href="./projects/bibs/exp-survey.bib">bibtex</a> |
+              <!-- <a shape="rect" href="javascript:toggleblock('exp-survey-bibtex', 'exp-survey-desc')" class="togglebib">bibtex</a>  -->
               <p align="justify"> <i id="exp-survey-abstract" class="hidden">
                 Exploration is an essential component of reinforcement learning algorithms, where agents need to learn how to predict and control unknown and often stochastic environments. Reinforcement learning agents depend crucially on exploration to obtain informative data for the learning process as the lack of enough information could hinder effective learning. In this article, we provide a survey of modern exploration methods in (Sequential) reinforcement learning, as well as a taxonomy of exploration methods.
                 </i></p>
@@ -358,7 +363,8 @@
             <div class="paper" id="RVF-via-NF">
               <a href="http://proceedings.mlr.press/v115/touati20a/touati20a.pdf">pdf</a> |
               <a href="javascript:toggleblock('rvf-nf-abstract', 'rvf-nf-desc')">abstract</a> |
-              <a shape="rect" href="javascript:toggleblock('rvf-nf-bibtex', 'rvf-nf-desc')" class="togglebib">bibtex</a> |
+              <!-- <a shape="rect" href="javascript:toggleblock('rvf-nf-bibtex', 'rvf-nf-desc')" class="togglebib">bibtex</a> | -->
+              <a href="./projects/bibs/rvf-via-nf.bib">bibtex</a> |
               <a href="https://github.com/facebookresearch/RandomizedValueFunctions">code</a>
               <p align="justify"> <i id="rvf-nf-abstract" class="hidden">
                 Randomized value functions offer a promising approach towards the challenge of efficient exploration in complex environments with high
@@ -401,7 +407,8 @@
             <div class="paper" id="ddr">
               <a href="https://arxiv.org/pdf/1804.10689.pdf">pdf</a> |
               <a href="javascript:toggleblock('ddr-abstract', 'ddr-desc')">abstract</a> |
-              <a shape="rect" href="javascript:toggleblock('ddr-bibtex', 'ddr-desc')" class="togglebib">bibtex</a> |
+              <!-- <a shape="rect" href="javascript:toggleblock('ddr-bibtex', 'ddr-desc')" class="togglebib">bibtex</a> | -->
+              <a href="./projects/bibs/ddr.bib">bibtex</a> |
               <a href="">code</a>
               <p align="justify"> <i id="ddr-abstract" class="hidden">
                   Current reinforcement learning (RL) methods can successfully learn single tasks, but often generalize poorly to
